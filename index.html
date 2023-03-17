@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mythic GME Roll Tables</title>
+        <script src="gmeRoll.js"></script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body class="dark-mode">
+        <button onclick="toggleDarkMode()">Dark/Light</button>
+        <h1 class = "chaosFactor">Chaos Factor:
+            <select id="chaos">
+                <option value = "1">1</option>
+                <option value = "2">2</option>
+                <option value = "3">3</option>
+                <option value = "4">4</option>
+                <option selected value = "5">5</option>
+                <option value = "6">6</option>
+                <option value = "7">7</option>
+                <option value = "8">8</option>
+                <option value = "9">9</option>
+            </select>
+        </h1>
+        <div class="wrapper">
+            <div class = "section">
+                <h1>Fate Question</h1>
+                <div class="outcome">
+                    <button onclick="fateRoll()">Roll!</button>
+                    <h3>Odds:
+                        <select id="odds">
+                            <option>Certain</option>
+                            <option>Nearly Certain</option>
+                            <option>Very Likely</option>
+                            <option>Likely</option>
+                            <option selected>50/50</option>
+                            <option>Unlikely</option>
+                            <option>Very Unlikely</option>
+                            <option>Nearly Impossible</option>
+                            <option>Impossible</option>
+                        </select>
+                    </h3>
+                    <h2 id = "fateRoll"><br></h2>
+                    <h2 id = "fateOutcome"><br></h2>
+                    <h2 id = "fateRandomEvent"><br></h2>
+                </div>
+            </div>
+            <div class = "section">
+                <h1>Testing Expected Scene</h1>
+                <div class="outcome">
+                    <button onclick="testExpectedScene()">Roll!</button>
+                    <h2 id = "expectedSceneRoll"><br></h2>
+                    <h2 id = "expectedSceneOutcome"><br></h2>
+                    <h2><br><br><br><br></h2>
+                </div>
+            </div>
+            <div class = "section">
+                <h1>Scene Adjustment Table</h1>
+                <div class="outcome">
+                    <button onclick="sceneAdjustment()">Roll!</button>
+                    <h2 id = "sceneAdjustmentRoll"><br></h2>
+                    <h2 id = "sceneAdjustment"><br><br></h2>
+                    <h2><br><br><br></h2>
+                </div>
+                
+            </div>
+            <div class = "section">
+                <h1>Random Event</h1>
+                <div class="outcome">
+                    <button onclick="randomEvent()">Roll!</button>
+                    <h2 id = "randomEventRoll"><br></h2>
+                    <h2 id = "randomEventOutcome"><br></h2>
+                </div>
+            </div>
+            <div class = "section">
+                <h1>Meaning Tables: Actions</h1>
+                <div class="outcome">
+                    <button onclick="meaningTablesActions()">Roll!</button>
+                    <h2 id = "meaningTablesActionsRoll"><br></h2>
+                    <h2 id = "meaningTablesActionsOutcome"><br></h2>
+                </div>
+            </div>
+            <div class = "section">
+                <h1>Meaning Tables: Descriptions</h1>
+                <div class="outcome">
+                    <button onclick="meaningTablesDescriptions()">Roll!</button>
+                    <h2 id = "meaningTablesDescriptionsRoll"><br></h2>
+                    <h2 id = "meaningTablesDescriptionsOutcome"><br></h2>
+                </div>
+            </div>
+        </div>
+        <div class="readMe">
+            <p>Hi! My name's Aidan and I woke up one morning and coded this. I discovered Mythic GME like two days ago, and I wanted a little coding challenge to brush up on my JavaScript.</p>
+            <p>This is far from perfect (Fate Questions are only done in the d100 style, for example) and I am not crazy enough to add all the Elements Meaning Tables... yet...</p>
+            <p>Anyways, be sure to <a href="https://www.drivethrurpg.com/product/422929/Mythic-Game-Master-Emulator-Second-Edition">support the awesome people behind this product</a> and enjoy!</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+.wrapper {
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.outcome {
+    border-style: solid;
+    padding: 3%;
+    text-align: center;
+}
+
+.section {
+    border-style: solid;
+    padding: 3%;
+    text-align: center;
+}
+
+.chaosFactor {
+    text-align: center;
+}
+
+body {
+    font-family: monospace;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+select {
+    background-color: rgb(207, 207, 207);
+    padding: 0.5em;
+    font-size: medium;
+}
+
+button {
+    background-color: rgb(207, 207, 207);
+    padding: 0.5em;
+    font-size: medium;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.readMe {
+    margin: auto;
+    width: 90%;
+}
