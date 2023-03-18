@@ -27,7 +27,7 @@ body {
 }
 
 .dark-mode {
-    background-color: black;
+    background-color: #121212;
     color: white;
 }
 
@@ -50,4 +50,14 @@ h1 {
 .readMe {
     margin: auto;
     width: 90%;
+}
+
+a {
+    text-decoration: none;
+    color:dodgerblue;
+}
+
+a:visited{
+    text-decoration: none;
+    color:dodgerblue;
 }
