@@ -123,7 +123,7 @@ function fateRoll(){
         document.getElementById("fateOutcome").innerHTML = `Exceptional Yes`;
     } else if(roll <= mid){
         document.getElementById("fateOutcome").innerHTML = `Yes`;
-    } else if(roll <= high){
+    } else if(roll < high){
         document.getElementById("fateOutcome").innerHTML = `No`;
     } else{
         document.getElementById("fateOutcome").innerHTML = `Exceptional No`;
@@ -183,40 +183,24 @@ function randomEvent(){
                             "NPC Negative", "NPC Positive", "Move Toward A Thread",
                             "Move Away From A Thread", "Close A Thread", "PC Negative",
                             "PC Positive", "Current Context"];
+    
+    const randomEventRolls = [5,10,20,40,45,50,55,65,70,80,85,100]
+    
     // Do roll
     var roll = Math.floor(Math.random() * 100) + 1; // Random number from 1 to 100
 
-    var event;
-
-    // Fuck if statements
-    if(roll <= 5){
-        event = randomEventTable[0];
-    } else if(roll <= 10){
-        event = randomEventTable[1];
-    } else if(roll <= 20){
-        event = randomEventTable[2];
-    } else if(roll <= 40){
-        event = randomEventTable[3];
-    } else if(roll <= 45){
-        event = randomEventTable[4];
-    } else if(roll <= 50){
-        event = randomEventTable[5];
-    } else if(roll <= 55){
-        event = randomEventTable[6];
-    } else if(roll <= 65){
-        event = randomEventTable[7];
-    } else if(roll <= 70){
-        event = randomEventTable[8];
-    } else if(roll <= 80){
-        event = randomEventTable[9];
-    } else if(roll <= 85){
-        event = randomEventTable[10];
-    } else{
-        event = randomEventTable[11];
-    }
+    var event = randomEventTable[determineRollRange(roll,randomEventRolls)];
 
     document.getElementById("randomEventRoll").innerHTML = roll;
     document.getElementById("randomEventOutcome").innerHTML = event;
+}
+
+function determineRollRange(roll,rollTable){
+    for(var i = 0; i < rollTable.length; i++){
+        if(roll <= rollTable[i]){
+            return i;
+        }
+    }
 }
 
 function meaningTablesActions(){
